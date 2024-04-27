@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [1, 2, 3, 4, 5, 4, 7, 8];
+    // 1,2,3,4,5,6,8,9,11: v
+    // 1 2 3 3 4: x
+    // 1 2 3 2 4: x
+    let kq = 'Mang tang dan';
+    for (let i = 0; i < arr.length-1; i++) {
+        if (arr[i+1] < arr[i]) {
+            kq = 'Mang k tang dan';
+            break;
+        }
+    }
+    alert(kq)
+</script>
+</body>
+</html>

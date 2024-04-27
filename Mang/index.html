@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+    1. Mảng: 1 bien dac biet (chua nhieu gia tri)
+    2. Cach khai bao
+    3. Cach truy xuat
+    4. Vi tri cua cac phan tu se bat dau tu 0
+    5. Cach duyet mang
+    6. ten.length = so luong phan tu cua mang
+-->
+<script>
+
+    let ab = [223, 234, 222, 333, 99];
+
+    // In ra cac phan tu trong mang
+    // In ra cac phan tu chia het cho 3 trong mang
+    // Tinh tong cac phan tu trong mang
+    // Tinh tich cac phan tu chan trong mang
+    // Dem cac phan tu > 1000 trong mang
+    // Tinh Trung Binh Cong cac phan tu > 1000 trong mang
+    // Tim max
+    let max = ab[0];
+    for (let i = 0; i < ab.length ; i++) {
+        if (max < ab[i]) {
+            max = ab[i]
+        }
+    }
+    document.write(max)
+    // Tim min
+    // Tim min cua cac phan tu chan: [1,2,3,4,5,2,0,1,2] => 0
+    // Tim max thu 2: [1,2,3,4,4,5,5,5] => 4
+    // Kiem tra xem mang co luon tang khong?
+    // [1,2,3,4, 6] => true
+    // [1,2,3,2,4,6] => false
+</script>
+</body>
+</html>
