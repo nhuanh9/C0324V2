@@ -1,10 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<!--
+    Hàm: 1 biến có thể chua code ben trong.
+    Khi dung ham, thi code ben trong moi chay
+    Uu diem: dung nhieu lan
+    function ten(x, y, z, ...) {
+        A
+        return t;
+    }
+    x, y, z: dau vao
+    t: dau ra
+    A: doan code xu ly dau vao de co dau ra
+-->
+<script>
+    function in5du2(a, b) {
+        for (let i = a; i <= b; i++) {
+            if (i % 5 == 2) {
+                document.write(i + '<br>');
+            }
+        }
+        return a + b;
+    }
+    //Tạo hàm nhận vào một đối số dạng số,
+    //tăng giá trị đối số đó lên 1 và trả lại giá trị cho lời gọi hàm.
+    //Gọi hàm từ trong phần <body> của trang web và hiển thị kết quả lên màn hình.
+    function b2(xx) {
+        xx += 1;
+        return xx;
+    }
+
+    //Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+    function b3(q, w, e) {
+        let min = q;
+        if (min > w) {
+            min = w;
+        }
+        if (min > e) {
+            min = e;
+        }
+        return min;
+    }
+    alert(b3(11, 21, 9))
+</script>
 </body>
 </html>

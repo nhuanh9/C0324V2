@@ -5,27 +5,57 @@
     <title>C03</title>
 </head>
 <body>
-Hello World
-<h1>Hello</h1>
-<h2>Haha</h2>
-<h3>Hihi</h3>
-<h4>Hihi</h4>
-<h5>Hihi</h5>
-<h6>Hihi</h6>
+<!--
+// In ra cac số từ 1 đến 1000;
+// In ra cac số từ a đến b;
+// In ra cac số từ a đến b, mỗi số trong 1 thẻ <h1>;
+// In ra các số chẵn tu a đến b;
+// In ra các số từ a đến b số chẵn trong h2, so le trong h1;
+// Tính tích, Tính Tổng các số chia 5 dư 2 từ a đến b.
+// Đếm các số chia 5 dư 2 từ a đến b
+// In ra các phần tử trong mảng
+// In ra các phần tử chẵn trong mảng;
+// In ra các phần số chẵn trong h2, le trong h1;
+// Tính tích các phần tử.
+// Tính tích các phần tử chẵn
+// Tính Tổng các phần tử.
+// Tính Tổng các phần tử chẵn
+// Tìm max trong mảng.
+// Tìm max của các phần tử chẵn trong mảng
+// Đếm có  bao nhiêu phần tử chia 5 dư 2 trong mảng
+// Nhap vào a, đếm số lượng a trong mảng.
+// Nhap vao a, tim vi tri cua a trong mảng.
+-->
+<h2 id="dis"></h2>
+<input type="text" id="so">
+<button onclick="them()">Them</button>
+<button onclick="dem()">Dem</button>
+<h3 id="kq"></h3>
+<script>
+    let arr = [];
+    function them() {
+        let pt = +document.getElementById('so').value;
+        arr.push(pt)
+        let str = '';
+        for (let i = 0; i < arr.length; i++) {
+            str += arr[i]+'<br>'
+        }
+        document.getElementById('dis').innerHTML = str;
+        // An them xong thi xoa trang input
+        document.getElementById('so').value = '';
+    }
 
-<p>
-    Xin chào mn
-    <br>
-    Xin chào mn
-    Xin chào mn
-    <hr>
-    Xin chào mn
-    <br>
-    Xin chào mn
-</p>
-<a href="https://www.youtube.com/">yyyy</a>
-<a href="https://www.youtube.com/">zzzz</a>
-<img style="width: 100px; height: 100px; border-radius: 50%" src="https://5sfashion.vn/storage/upload/images/ckeditor/4KG2VgKFDJWqdtg4UMRqk5CnkJVoCpe5QMd20Pf7.jpg" alt="">
+    function dem() {
+        let d = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 5 == 2) {
+                d++;
+            }
+        }
+        document.getElementById('kq').innerHTML = d;
+    }
+
+</script>
 </body>
 </html>
 
