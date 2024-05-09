@@ -13,6 +13,9 @@
     setInterval(() => {
         itachi.style.left = parseInt(itachi.style.left) + w + "px"
         itachi.style.top = parseInt(itachi.style.top) + h + 'px'
+        if ( parseInt(itachi.style.left)>= window.innerWidth - itachi.width) {
+            itachi.style.left = '0px';
+        }
     }, 10)
     function sangPhai() {
         w = 3;
