@@ -6,28 +6,38 @@
 </head>
 <body>
 <img src="nv.png" alt="" style="width: 100px; position: absolute; top: 100px; left: 200px" id="v">
-<button onclick="sangPhai()">Sang Phai</button>
-<button onclick="sangTrai()">Sang Trai</button>
-<button onclick="lenTren()">Len tren</button>
-<!--
-Ảnh đi sang phải??? Tăng left. Đi xuong: tang top
--->
 <script>
     function sangPhai() {
         let son = document.getElementById('v')
-        son.style.left = parseInt(son.style.left) + Math.random()*100 + 'px'
+        son.style.left = parseInt(son.style.left) + 20 + 'px'
     }
-
     function sangTrai() {
         let son = document.getElementById('v')
-        son.style.left = parseInt(son.style.left) - Math.random()*100 + 'px'
+        son.style.left = parseInt(son.style.left) - 20 + 'px'
     }
-
     function lenTren() {
         let son = document.getElementById('v')
-        son.style.top = parseInt(son.style.top) - Math.random()*100 + 'px'
+        son.style.top = parseInt(son.style.top) - 20 + 'px'
     }
-
+    function xuongDuoi() {
+        let son = document.getElementById('v')
+        son.style.top = parseInt(son.style.top) + 20 + 'px'
+    }
+    window.addEventListener('keydown', (e) => {
+        console.log(e.key)
+        if (e.key === 'a') {
+            sangTrai();
+        }
+        if (e.key === 'd') {
+            sangPhai();
+        }
+        if (e.key === 'w') {
+            lenTren();
+        }
+        if (e.key === 's') {
+            xuongDuoi();
+        }
+    })
 </script>
 </body>
 </html>
